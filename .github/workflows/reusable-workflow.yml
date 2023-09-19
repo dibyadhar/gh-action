@@ -7,9 +7,6 @@ on:
         default: 'Dibya Dhar'
         required: true
         type: string
-    secrets:
-      envPAT:
-        required: true
 
 jobs:
   print-username:
