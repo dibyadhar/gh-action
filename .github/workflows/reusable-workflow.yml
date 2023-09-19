@@ -1,0 +1,21 @@
+name: resuable workflow
+
+on:
+  workflow_call:
+    inputs:
+      username:
+        default: 'Dibya Dhar'
+        required: true
+        type: string
+    secrets:
+      envPAT:
+        required: true
+
+jobs:
+  print-username:
+    runs-on: ubuntu-latest
+   
+    steps:
+      - name: Print the input name to the STDOUT
+        run: echo The username is ${{ inputs.username }}
+
